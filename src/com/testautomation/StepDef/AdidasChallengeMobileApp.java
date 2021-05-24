@@ -100,8 +100,8 @@ public class AdidasChallengeMobileApp {
     public void userIsAbleToAddReviewWithReviewTextAndRatingNumber(String review, String rating) {
         driver.findElementById("com.example.challenge:id/reviewDetails").sendKeys(review);
         //driver.findElement(By.id("xpath_of_spinner")).click();
-        driver.findElement(By.id("com.example.challenge:id/reviewNumber")).click();
-        driver.findElement(By.name(rating)).click();
+        driver.findElementById("com.example.challenge:id/reviewNumber").click();
+        driver.findElementByXPath("//android.widget.CheckedTextView[3]").click();
         driver.findElementById("com.example.challenge:id/saveReview").click();
     }
 
